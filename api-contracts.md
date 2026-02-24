@@ -46,3 +46,4 @@ Validates token integrity and expiration.
 - 400 Token must not be empty.
 - 401 Token expired, Invalid token format or signature.
 - 500 Error while validating token.
+

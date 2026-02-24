@@ -39,3 +39,33 @@ and JWT-based authentication.
 3. JWT token is issued
 4. Frontend stores token
 5. Subsequent requests include Authorization header
+
+## Upcoming Domain Architecture
+
+The booking domain will introduce the following core components:
+
+- Provider (1:1 relationship with User)
+- Availability (provider working hours)
+- Booking (startAt + duration model)
+
+Time modeling decision:
+- OffsetDateTime used for scheduling
+- Duration stored explicitly as part of business concept
+- End time derived from startAt + duration
+
+Conflict handling strategy:
+- Application-level validation
+- Database-level protection against overlapping bookings
+
+## Architectural Style
+
+The platform follows a modular monolith architecture.
+
+Domains are separated logically within the same deployment unit,
+allowing clear bounded contexts while keeping operational complexity low.
+
+This approach was intentionally chosen to:
+- Simplify deployment
+- Avoid premature microservice complexity
+- Maintain strong transactional consistency
+- Enable future extraction if scaling demands it

@@ -1,20 +1,33 @@
 # Roadmap
 
-## Short Term
+## Phase 1 – Authentication Foundation (Completed)
 
-- Improve error handling consistency
-- Add basic automated tests
-- Improve UI feedback on authentication errors
+- JWT authentication
+- Secure API integration
+- Role definition
+- Token validation endpoint
 
-## Mid Term
+## Phase 2 – Core Scheduling (In Progress)
 
-- Role-based authorization
-- Token refresh mechanism
-- Dockerized local setup
+- Provider entity
+- Availability modeling
+- Booking entity (startAt + duration)
+- Conflict detection logic
+- Database indexing strategy for provider-scoped scheduling queries
+- REST endpoints for booking
 
-## Long Term
+## Phase 3 – Robustness & Production Readiness
 
-- Booking domain implementation
-- Appointment scheduling
-- Notifications and email integration
-- Observability and metrics
+- Integration tests
+- Concurrency testing
+- Docker Compose setup
+- OpenAPI documentation
+- Structured logging
+
+## Phase 4 – Advanced Features (Future)
+
+- Booking rescheduling
+- Soft delete / auditing
+- Observability (metrics + tracing)
+- Email notifications
+- Deployment documentation (AWS-ready)

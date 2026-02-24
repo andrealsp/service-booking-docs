@@ -17,6 +17,11 @@ Tokens are issued upon successful login and validated on each request.
 - Invalid or expired tokens are rejected
 - Token validation is applied at filter level
 
+## Input Validation
+
+- Bean Validation (Jakarta Validation) will be used
+- DTO-level validation before domain execution
+
 ## Frontend Considerations
 
 - Tokens are stored client-side
@@ -27,3 +32,10 @@ Tokens are issued upon successful login and validated on each request.
 
 - Token revocation is not implemented
 - Refresh tokens are not part of current scope
+
+## Future Security Enhancements
+
+- Authorization rules per booking ownership
+- Provider-scoped data access
+- Token refresh strategy
+- Rate limiting strategy (future consideration)
